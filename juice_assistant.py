@@ -97,7 +97,7 @@ while True:
         webbrowser.open('www.google.com')
         tts.speak('Okay')
 
-    elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("gmail" in query):
+    elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) or ("check" in query)) and ("gmail" in query) or ("mail" in query):
         webbrowser.open('www.gmail.com')
         tts.speak('Okay')
 
