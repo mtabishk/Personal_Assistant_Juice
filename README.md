@@ -5,7 +5,7 @@
 ## Getting Started
 In order to start Juice just clone this repository.
 
-Run Juice from anywhere by running this file using python interpretor.
+Run Juice from anywhere by running this file (juice_assistant.py) using python interpretor.
 
 ## Author
 [mtabishk](https://github.com/mtabishk/)
