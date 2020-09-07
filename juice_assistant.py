@@ -69,6 +69,8 @@ while True:
         os.system("start calc")
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and (("camera" in query) or ("webcam" in query) ):
         os.system("start microsoft.windows.camera:.")
+    elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("google" in query):
+        os.system("start chrome https://google.com")
     elif ('bye juice' in query) or ('bye' in query):
         tts.speak('Good Bye... Have a good time.')
         exit()
