@@ -3,9 +3,10 @@ import pyttsx3 as tts
 import datetime
 import speech_recognition as sr
 import webbrowser
+import random
 
 print("\t\t====================================================================================")
-print("\t\t\t\t\t\tJuice Personal Assistant")
+print("\t\t\t\t\t\t Personal Assistant Juice")
 print("\t\t====================================================================================")
 print()
 
@@ -44,34 +45,78 @@ def mycommand():
     return query
 
 while True:
+
     query = mycommand().lower()
     print("query is ", query)
 
     if ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ( ("chrome" in query) or ("browser" in query) ):
         os.system("start chrome")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("notepad" in query):
         os.system("start notepad")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("firefox" in query):
         os.system("start firefox")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("whatsapp" in query):
         os.system("C:\\Users\\mtabi\\AppData\\Local\\WhatsApp\\WhatsApp.exe")
-    elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("spotify" in query):
+        tts.speak('Okay')
+
+    elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and (("spotify" in query) or ("music" in query) ):
         os.system("start spotify")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("vlc" in query):
         os.system("start vlc")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ( ("cmd" in query) or ("terminal" in query) ):
         os.system("start cmd")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("control panel" in query):
         os.system("start control panel")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ( ("explorer" in query) or ("this pc" in query) or ("my computer") in query):
         os.system("start explorer")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("calculator" in query):
         os.system("start calc")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and (("camera" in query) or ("webcam" in query) ):
         os.system("start microsoft.windows.camera:.")
+        tts.speak('Okay')
+
     elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("google" in query):
-        os.system("start chrome https://google.com")
+        webbrowser.open('www.google.com')
+        tts.speak('Okay')
+
+    elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("gmail" in query):
+        webbrowser.open('www.gmail.com')
+        tts.speak('Okay')
+
+
+    elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("youtube" in query):
+        webbrowser.open('www.youtube.com')
+        tts.speak('Okay')
+
+    elif ( ("start" in query) or ("open" in query) or ("run" in query) or ("execute" in query) or ("begin" in query) ) and ("wikipedia" in query):
+        webbrowser.open('www.wikipedia.org')
+        tts.speak('Okay')
+
+    elif "what\'s up" in query or 'how are you' in query:
+        stMsgs = ['Just helping you!', 'Just doing my things!', 'I am fine!', 'Nice!',
+                  'I am nice and full of energy!']
+        tts.speak(random.choice(stMsgs))
+
     elif ('bye juice' in query) or ('bye' in query):
+        tts.speak('Okay')
         tts.speak('Good Bye... Have a good time.')
         exit()
     else:
