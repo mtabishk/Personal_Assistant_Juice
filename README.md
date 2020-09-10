@@ -2,6 +2,8 @@
 
 ### Juice is a simple personal assistant for Linux, MacOS and Windows which works on the command line. He can talk to you if you enable his voice. He can run chrome, notepad, whatsapp, firefox, vlc player, spotify, control panel, explorer, etc for you. He can also do some great stuff for you.
 
+![](https://miro.medium.com/max/2112/1*b03OtV78QsRPZ30Z_3V8mA.png)
+
 ## Getting Started
 In order to start Juice just clone this repository.
 
